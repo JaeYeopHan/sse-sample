@@ -1,4 +1,4 @@
-import { Procedure } from './../../types/index';
+import { Procedure, EVENT } from './../../types/index';
 
 const eventSourceConfig = {
   withCredentials: true,
@@ -12,7 +12,8 @@ export function init(callback: Procedure, entry = '/stream') {
     console.log(`Complete to initialize EventSource with : ${entry}`)
     source = stocks
 
-    stocks.onmessage = ({ data }: any) => console.log((JSON.parse(data)))
+    // stocks.onmessage = ({ data }: any) => console.log((JSON.parse(data)))
+    stocks.addEventListener(EVENT.USER_INFO, ({ data }: any) => console.log((JSON.parse(data))))
     callback()
   }
 }

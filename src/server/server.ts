@@ -33,7 +33,7 @@ app.get('/stream', (req, res, next) => {
       blog: 'jbee.io',
       createdTime: Date.now()
     }))
-  }, 5000)
+  }, 1000)
 
   req.on('close', () => {
     console.log(`Close stream`)
