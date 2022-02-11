@@ -18,7 +18,7 @@ $ npm start
 
 그리고 WebSocket 방식이 있다. 최초에 connection을 연결한 다음, 그 connection을 기반으로 서버와 클라이언트가 통신하는 방식이다.
 
-그리고 Server-Sent-Event 방식이 있다. EventSource라는 interface로 서버에서의 push를 받을 수 있는 API이다. 다음과 같은 특징을 같는다.
+그리고 Server-Sent-Event 방식이 있다. EventSource라는 interface로 서버에서의 push를 받을 수 있는 API이다. 다음과 같은 특징을 갖는다.
 
 - EventSource 는 DOM event를 통해 서버로부터 push notification을 받을 수 있도록 한다.
 - 마지막으로 전달된 메세지에 대해 응답이 끊겼을 경우, auto reconnection을 진행한다.
